@@ -1,0 +1,42 @@
+.cls-menu{
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    &:before,&:after{
+        position: absolute;
+        content :'';
+        width:100%;
+        border-top:2px solid #ccc;
+    }
+    &:before{
+        top:0px;
+    }
+    &:after{
+        bottom: 0px;
+    }
+    span{
+        width: 100%;
+        background: #ccc;
+        height: 2px;
+        position: absolute;
+        top: 47%;
+    }
+    &:hover{
+        &:before,&:after{
+            border-top:2px solid red;
+        }
+        &:after{
+            bottom: 8px;
+            transform: rotate(-224deg);
+        }
+        &:before{
+            top: 14px;
+            transform: rotate(224deg);
+        }
+        span{
+            display: none;
+        }
+    }
+}
